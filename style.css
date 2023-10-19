@@ -1,109 +1,135 @@
+body {
+  background: rgb(90, 2, 93);
+  background: linear-gradient(0deg, rgba(90, 2, 93, 1) 9%, rgba(13, 1, 32, 1) 90%, rgba(3, 1, 25, 1) 100%);
+  font-family: 'Roboto Slab', serif;
+}
 
-body{
-    background: rgb(90,2,93);
-    background: linear-gradient(0deg, rgba(90,2,93,1) 9%, rgba(13,1,32,1) 90%, rgba(3,1,25,1) 100%);
-    font-family: 'Roboto Slab', serif;
+.main {
+  font-family: 'EB Garamond', serif;
+  font-size: larger;
+  font-weight: bolder;
+  color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
-.main{
-    font-family: 'EB Garamond', serif;
-    font-size: larger;
-    font-weight: bolder;
-    color: aliceblue;
-    display: flex;
-    align-items: center;
-    justify-content: center;
- 
+
+.main h1 {
+  animation: color-animation 5s infinite;
+
+
 }
-.main h1{
-    animation: color-animation 5s infinite;
- 
-   
-}
-.cardholder{
-    display: flex;
-    justify-content: space-between;
+
+.cardholder {
+  display: flex;
+  justify-content: space-between;
 }
 
 .card {
-    width: 250px;
-    height: 200px;
-    padding: 20px;
-    margin: 20px;
-    border: 6px solid rgb(58, 33, 33);
-    border-radius: 15px;
-    animation: border-animation 5s infinite;
-   
-    box-shadow: 5px 5px 5px #090101;
-    background: rgb(184,162,185);
-background: linear-gradient(0deg, rgb(231, 201, 232) 9%, rgba(246,244,246,1) 44%, rgba(255,255,255,1) 90%, rgba(255,255,255,1) 100%);
-    
-  }
-  .card:hover{
-    background: linear-gradient(0deg, rgb(255, 251, 255) 9%, rgb(255, 254, 255) 44%, rgb(237, 209, 253) 90%, rgb(222, 182, 255) 100%);
-   cursor: pointer; 
-
-  }
-  .name{
-    font-family: 'Libre Baskerville', serif;
-    padding: 15px;
-  }
-  a{
-    text-decoration: none;
-    color: #090101;
-    font-weight: bolder;
-    font-size: large;
-  }
-.prof{
-
-   margin: 10px;
-
+  width: 250px;
+  height: 200px;
+  padding: 20px;
+  margin: 20px;
+  border: 6px solid rgb(58, 33, 33);
+  border-radius: 15px;
+  animation: border-animation 5s infinite;
+  box-shadow: 5px 5px 5px #090101;
+  background: rgb(184, 162, 185);
+  background: linear-gradient(0deg, rgb(231, 201, 232) 9%, rgba(246, 244, 246, 1) 44%, rgba(255, 255, 255, 1) 90%, rgba(255, 255, 255, 1) 100%);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
-.prof:hover{
-    text-shadow: 0.5px 0.5px 0.2px rgb(91, 1, 225);
-}
-.repo:hover{
-    text-shadow: 0.5px 0.5px 0.2px rgb(91, 1, 225);
-}
-.repo{
 
- margin: 10px;
- 
+.card:hover {
+  background: linear-gradient(0deg, rgb(255, 251, 255) 9%, rgb(255, 254, 255) 44%, rgb(237, 209, 253) 90%, rgb(222, 182, 255) 100%);
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 10px 10px 10px #090101;
+}
+
+.name {
+  font-family: 'Libre Baskerville', serif;
+  padding: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: #090101;
+  font-weight: bolder;
+  font-size: large;
+}
+
+.prof {
+  transition: transform 0.3s, color 0.3s;
+}
+
+.prof:hover {
+  text-shadow: 0.5px 0.5px 0.2px rgb(91, 1, 225);
+  transform: scale(1.05);
+  color: #FF4500;
+}
+
+.repo {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.repo:hover {
+  text-shadow: 0.5px 0.5px 0.2px rgb(91, 1, 225);
+  transform: scale(1.05);
+  color: #FF6347;
+}
+
+.links {
+  padding-top: 5px;
 }
 
 @keyframes border-animation {
-    0% {
+  0% {
       border-color: rgb(160, 140, 212);
-    }
-    20% {
+  }
+
+  20% {
       border-color: rgb(114, 94, 163);
-    }
-    40% {
+  }
+
+  40% {
       border-color: rgb(83, 67, 113);
-    }
-    60% {
+  }
+
+  60% {
       border-color: rgb(139, 107, 180);
-    }
-    80% {
+  }
+
+  80% {
       border-color: rgb(255, 255, 255);
-    }
-    100% {
+  }
+
+  100% {
       border-color: rgb(182, 146, 227);
-    }
   }
-  @keyframes color-animation {
-    0% {
+}
+
+@keyframes color-animation {
+  0% {
       color: rgb(215, 192, 217);
-    }
-    25% {
-      color: rgb(230, 171, 244);
-    }
-    50% {
-      color: rgb(205, 140, 235);
-    }
-    75% {
-      color: rgb(110, 82, 171);
-    }
-    100% {
-      color: rgb(218, 160, 247);
-    }
   }
+
+  25% {
+      color: rgb(230, 171, 244);
+  }
+
+  50% {
+      color: rgb(205, 140, 235);
+  }
+
+  75% {
+      color: rgb(110, 82, 171);
+  }
+
+  100% {
+      color: rgb(218, 160, 247);
+  }
+}
