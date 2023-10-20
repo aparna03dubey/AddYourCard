@@ -1,34 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;600&display=swap');
+
 body {
   background: rgb(90, 2, 93);
   background: linear-gradient(0deg, rgba(90, 2, 93, 1) 9%, rgba(13, 1, 32, 1) 90%, rgba(3, 1, 25, 1) 100%);
-  font-family: 'Roboto Slab', serif;
 }
 
 .main {
-  font-family: 'EB Garamond', serif;
   font-size: larger;
   font-weight: bolder;
   color: aliceblue;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: 'Playpen Sans', cursive;
 
 }
 
 .main h1 {
   animation: color-animation 5s infinite;
-
+  font-family: 'Playpen Sans', cursive;
 
 }
 
 .cardholder {
+  width: 100%;
+  height: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .card {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
   width: 250px;
-  height: 200px;
+  height: 300px;
   padding: 20px;
   margin: 20px;
   border: 6px solid rgb(58, 33, 33);
@@ -48,8 +57,14 @@ body {
 }
 
 .name {
-  font-family: 'Libre Baskerville', serif;
+  min-height: 5rem;
+  font-family: 'Playpen Sans', cursive;
   padding: 15px;
+}
+
+i {
+  font-size: 25px;
+  margin-bottom: 1rem;
 }
 
 a {
@@ -57,6 +72,8 @@ a {
   color: #090101;
   font-weight: bolder;
   font-size: large;
+  font-family: 'Playpen Sans', cursive;
+
 }
 
 .prof {
@@ -66,7 +83,7 @@ a {
 .prof:hover {
   text-shadow: 0.5px 0.5px 0.2px rgb(91, 1, 225);
   transform: scale(1.05);
-  color: #FF4500;
+  color: #7300ff;
 }
 
 .repo {
@@ -79,57 +96,58 @@ a {
 .repo:hover {
   text-shadow: 0.5px 0.5px 0.2px rgb(91, 1, 225);
   transform: scale(1.05);
-  color: #FF6347;
+  color: #7300ff;
 }
 
 .links {
   padding-top: 5px;
+  height: 25%;
 }
 
 @keyframes border-animation {
   0% {
-      border-color: rgb(160, 140, 212);
+    border-color: rgb(160, 140, 212);
   }
 
   20% {
-      border-color: rgb(114, 94, 163);
+    border-color: rgb(114, 94, 163);
   }
 
   40% {
-      border-color: rgb(83, 67, 113);
+    border-color: rgb(83, 67, 113);
   }
 
   60% {
-      border-color: rgb(139, 107, 180);
+    border-color: rgb(139, 107, 180);
   }
 
   80% {
-      border-color: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
   }
 
   100% {
-      border-color: rgb(182, 146, 227);
+    border-color: rgb(182, 146, 227);
   }
 }
 
 @keyframes color-animation {
   0% {
-      color: rgb(215, 192, 217);
+    color: rgb(215, 192, 217);
   }
 
   25% {
-      color: rgb(230, 171, 244);
+    color: rgb(230, 171, 244);
   }
 
   50% {
-      color: rgb(205, 140, 235);
+    color: rgb(205, 140, 235);
   }
 
   75% {
-      color: rgb(110, 82, 171);
+    color: rgb(110, 82, 171);
   }
 
   100% {
-      color: rgb(218, 160, 247);
+    color: rgb(218, 160, 247);
   }
 }
