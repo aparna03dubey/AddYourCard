@@ -31,6 +31,9 @@
   </head>
 
   <body>
+    <div class="search-container">
+    <input type="text" id="searchInput" onkeyup="searchCards()" placeholder="Search for names...">
+  </div>
     <div class="main">
       <h1>Add Your Card</h1>
     </div>
@@ -303,4 +306,28 @@
       
     </div>
   </body>
+  <script>
+    function searchCards() {
+  // Get input value and convert it to lowercase for case-insensitive search
+  var input = document.getElementById('searchInput').value.toLowerCase();
+
+  // Get all cards
+  var cards = document.querySelectorAll('.card');
+
+  // Loop through each card
+  cards.forEach(function (card) {
+    // Get the name in the card and convert it to lowercase
+    var name = card.querySelector('.name h2').innerText.toLowerCase();
+
+    // Check if the input value is present in the card name
+    if (name.includes(input)) {
+      // If yes, display the card
+      card.style.display = 'block';
+    } else {
+      // If not, hide the card
+      card.style.display = 'none';
+    }
+  });
+}
+  </script>
 </html>
