@@ -115,15 +115,22 @@ a {
   padding: 10px;
   width: 100%;
   max-width: 300px;
-  border: 3px solid #ddd;
+  border: 6px solid #ddd;
   border-radius: 10px;
   margin-right: 10px;
-  margin-top: 3%;
+  margin-top: -1%;
+  margin-bottom: 2%;
   position:relative;
-  left: 75%;
-  background-color: wheat;
+  left: 40%;
+  background-color: white;
+  animation: border-animation 5s infinite;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
-
+#searchTnput:hover {
+  text-shadow: 0.5px 0.5px 0.2px rgb(91, 1, 225);
+  transform: scale(1.05);
+  color: #7300ff;
+}
 
 @keyframes border-animation {
   0% {
