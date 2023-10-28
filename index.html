@@ -372,7 +372,7 @@
     // Check if the input value is present in the card name
     if (name.includes(input)) {
       // If yes, display the card
-      card.style.display = 'block';
+      card.style.display = 'flex'; // Fix issue of displaying different html content of card
     } else {
       // If not, hide the card
       card.style.display = 'none';
