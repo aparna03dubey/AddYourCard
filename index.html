@@ -33,9 +33,6 @@
   </div>
   
   <hr>
-  
-  <!-- Add empty state when search result is empty -->
-  <div id="empty-state"></div>
 
   <div class="cardholder">
     <div class="card">
@@ -301,15 +298,13 @@
       // Get the name in the card and convert it to lowercase
       var name = card.querySelector('.name span').innerText.toLowerCase();
 
-      document.getElementById('empty-state').innerHTML ="";
       // Check if the input value is present in the card name
       if (name.includes(input)) {
         // If yes, display the card
-        card.style.display = 'flex'; // Fix issue of displaying different html content of card
+        card.style.display = 'block';
       } else {
         // If not, hide the card
         card.style.display = 'none';
-        document.getElementById('empty-state').innerHTML ="<h1>Card not found!!</h1>";
       }
     });
 }
