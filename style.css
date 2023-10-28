@@ -3,6 +3,8 @@
 body {
   background: rgb(90, 2, 93);
   background: linear-gradient(0deg, rgba(90, 2, 93, 1) 9%, rgba(13, 1, 32, 1) 90%, rgba(3, 1, 25, 1) 100%);
+  font-family: 'Playpen Sans', cursive;
+  width: 100%;
 }
 
 .main {
@@ -10,16 +12,12 @@ body {
   font-weight: bolder;
   color: aliceblue;
   display: flex;
-  align-items: center;
+  width: 100%;
   justify-content: center;
-  font-family: 'Playpen Sans', cursive;
-
 }
 
 .main h1 {
   animation: color-animation 5s infinite;
-  font-family: 'Playpen Sans', cursive;
-
 }
 
 .cardholder {
@@ -51,20 +49,19 @@ body {
 
 .card:hover {
   background: linear-gradient(0deg, rgb(255, 251, 255) 9%, rgb(255, 254, 255) 44%, rgb(237, 209, 253) 90%, rgb(222, 182, 255) 100%);
-  cursor: pointer;
   transform: scale(1.05);
   box-shadow: 10px 10px 10px #090101;
 }
 
 .name {
-  min-height: 5rem;
-  font-family: 'Playpen Sans', cursive;
-  padding: 15px;
+  width: 100%;
+  margin: 20px 0 0 0;
+  text-align: center;
 }
 
-i {
-  font-size: 25px;
-  margin-bottom: 1rem;
+span {
+  font-size: 1.5em;
+  font-weight: 600;
 }
 
 a {
@@ -72,11 +69,10 @@ a {
   color: #090101;
   font-weight: bolder;
   font-size: large;
-  font-family: 'Playpen Sans', cursive;
-
 }
 
 .prof {
+  margin: 20px 0 -60px 0;
   transition: transform 0.3s, color 0.3s;
 }
 
@@ -87,8 +83,7 @@ a {
 }
 
 .repo {
-  position: absolute;
-  display: flex;
+  margin: 20px 0 0 0;
   justify-content: space-between;
   transition: transform 0.3s, color 0.3s;
 }
@@ -103,11 +98,12 @@ a {
   padding-top: 5px;
   height: 25%;
 }
+
 .search-container {
+  width: 100%;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  margin: 20px 20px 0 20px;
+  margin: 20px 0 -40px -20px; /* make search container to the center */
 }
 
 /* Search input styling */
@@ -119,17 +115,28 @@ a {
   border-radius: 10px;
   margin-right: 10px;
   margin-top: -1%;
-  margin-bottom: 2%;
+  margin-bottom: 5%;
   position:relative;
   left: 40%;
   background-color: white;
   animation: border-animation 5s infinite;
   transition: transform 0.3s, box-shadow 0.3s;
 }
+
 #searchTnput:hover {
   text-shadow: 0.5px 0.5px 0.2px rgb(91, 1, 225);
   transform: scale(1.05);
   color: #7300ff;
+}
+
+#empty-state {
+  font-size: larger;
+  font-weight: bolder;
+  color: aliceblue;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  animation: color-animation 5s infinite;
 }
 
 @keyframes border-animation {
