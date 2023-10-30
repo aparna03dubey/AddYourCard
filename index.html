@@ -38,6 +38,10 @@
     <div class="search-container">
       <input type="text" id="searchInput" onkeyup="searchCards()" placeholder="Search for names...">
     </div>
+
+    <!-- Add empty state when search result is empty -->
+    <div id="empty-state"></div>
+
     <div class="cardholder">
       <div class="card">
         <div class="name">
@@ -369,13 +373,15 @@
     // Get the name in the card and convert it to lowercase
     var name = card.querySelector('.name h2').innerText.toLowerCase();
 
+    document.getElementById('empty-state').innerHTML ="";
     // Check if the input value is present in the card name
     if (name.includes(input)) {
       // If yes, display the card
-      card.style.display = 'block';
+      card.style.display = 'flex'; // Fix issue of displaying different html content of card
     } else {
       // If not, hide the card
       card.style.display = 'none';
+      document.getElementById('empty-state').innerHTML ="<h1>Card not found!!</h1>";
     }
   });
 }
