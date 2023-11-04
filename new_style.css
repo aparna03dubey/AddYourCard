@@ -1,0 +1,103 @@
+*{
+    margin:0;
+    padding:0;
+    text-decoration:none;
+    outline:none;
+    font-family: 'Edu TAS Beginner', cursive;
+}
+body{
+    max-width:1400px;
+    margin:auto;
+    background-color:#e3f4f4;
+}
+header{
+    display:flex;
+    padding:10px 20px;
+    /* border:1px solid black;*/
+    justify-content: space-between;
+    align-items:center;
+    border-bottom:2px solid #447c7cb2;
+    text-shadow: 0px 0px 2px #447c7c63;
+}
+.search-container{
+    display:flex;
+    align-items:center;
+    color:#447c7c;
+}
+#searchInput{
+    border-radius: 3px;
+    font-family:Arial, Helvetica, sans-serif;
+    /* border:1px solid #447c7cad; */
+    border:none;
+    font-size:0.9rem;
+    padding:4px;
+    box-shadow: 0px 0px 2px #447c7cb0;
+    transition: all 0.4s ease-in-out;
+}
+#searchInput:hover{
+    box-shadow: 0px 0px 5px #447c7c;
+}
+.search-container > svg{
+    /* font-size:1.7rem; */
+    margin-left:10px;
+}
+.heading{
+    font-size:2rem;
+    color:#447c7c;
+    text-shadow: 0px 0px 2px #447c7c63;
+}
+.cardholder{
+    display:grid;
+    gap:20px;
+    padding:40px 10px;
+    grid-template-columns: repeat(3,1fr);
+}
+.cardholder > .card{
+    display:flex;
+    flex-direction: column;
+    justify-content:space-around;
+    border:1px solid #8ab4b4;
+    height:350px;
+    width:300px;
+    margin:0px auto;
+    background-color:#e3f4f4;
+    border-radius:10px;
+    box-shadow:0px 0px 40px rgba(128, 128, 128, 0.384);
+    transition:all 0.3s ease-in-out;
+}
+.card>div , a{
+    display:flex;
+    justify-content: center;
+    color:#447c7c;
+    align-items:center;
+    text-shadow: 0px 0px 2px #447c7c63;
+}
+.card:hover{
+    transform:scale(1.03);
+}
+.name{
+    font-size: 1.4rem;
+}
+.prof , .repo{
+    display:flex;
+    align-items: center;
+    font-size:1.2rem;
+    transition: all 0.3s ease-in-out;
+}
+.prof:hover,.repo:hover{
+    transform: scale(1.1);
+} 
+
+.prof > svg{
+    margin-right:10px;
+}
+.prof>a, .repo>a {
+    /* border:1px solid black; */
+    transition: all 0.3s ease-in-out;
+}
+.foot{
+    display: flex;
+    justify-content: center;
+    padding: 2% 0px;
+    border-top:2px solid #447c7cbe;
+}
