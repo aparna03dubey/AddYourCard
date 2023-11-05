@@ -138,6 +138,16 @@ a {
   color: #7300ff;
 }
 
+#empty-state {
+  font-size: larger;
+  font-weight: bolder;
+  color: aliceblue;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  animation: color-animation 5s infinite;
+}
+
 .foot {
   margin: 20px 0 20px 0;
   font-size: larger;
