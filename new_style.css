@@ -101,3 +101,9 @@ header{
     padding: 2% 0px;
     border-top:2px solid #447c7cbe;
 }
+
+@media only screen and (max-width:528px){
+    .cardholder{
+        grid-template-columns: repeat (2,1fr);
+    }
+}
