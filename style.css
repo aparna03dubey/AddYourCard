@@ -1,207 +1,240 @@
-@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;600&display=swap');
+:root {
+    --primary-color: #447c7c;
+    --primary-color-shadow: rgba(68, 124, 124, 0.38);
+    --primary-color-border: rgba(68, 124, 124, 0.7);
+    --background-color: #121212;
+    --text-color: #e3f4f4;
+    --box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.5);
+    --transition: all 0.3s ease-in-out;
+    --hover-shadow: 0px 0px 20px rgba(68, 124, 124, 0.5);
+    --gradient: linear-gradient(135deg, #1a1a1a, #000000);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+}
 
 body {
-  background: rgb(90, 2, 93);
-  background: linear-gradient(0deg, rgba(90, 2, 93, 1) 9%, rgba(13, 1, 32, 1) 90%, rgba(3, 1, 25, 1) 100%);
-  font-family: 'Playpen Sans', cursive;
-  width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    background: var(--gradient);
+    color: var(--text-color);
 }
 
-.main {
-  font-size: larger;
-  font-weight: bolder;
-  color: aliceblue;
-  display: flex;
-  width: 100%;
-  justify-content: center;
-}
-
-.main h1 {
-  animation: color-animation 5s infinite;
-}
-
-.cardholder {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.card {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-direction: column;
-  width: 250px;
-  height: 300px;
-  padding: 20px;
-  margin: 20px;
-  border: 6px solid rgb(58, 33, 33);
-  border-radius: 15px;
-  animation: border-animation 5s infinite;
-  box-shadow: 5px 5px 5px #090101;
-  background: rgb(184, 162, 185);
-  background: linear-gradient(0deg, rgb(231, 201, 232) 9%, rgba(246, 244, 246, 1) 44%, rgba(255, 255, 255, 1) 90%, rgba(255, 255, 255, 1) 100%);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-  background: linear-gradient(0deg, rgb(255, 251, 255) 9%, rgb(255, 254, 255) 44%, rgb(237, 209, 253) 90%, rgb(222, 182, 255) 100%);
-  transform: scale(1.05);
-  box-shadow: 10px 10px 10px #090101;
-}
-
-.name {
-  width: 100%;
-  margin: 20px 0 0 0;
-  text-align: center;
-}
-
-span {
-  font-size: 1.5em;
-  font-weight: 600;
-}
-
-a {
-  text-decoration: none;
-  color: #090101;
-  font-weight: bolder;
-  font-size: large;
-}
-
-.prof {
-  margin: 20px 0 -60px 0;
-  transition: transform 0.3s, color 0.3s;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cdefs/%3E%3Cpath d='M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z'/%3E%3C/svg%3E");
-  background-position: center left 0.5em;
-  background-repeat: no-repeat;
-  background-size: 1.25rem;
-  padding-left: 30px;
-}
-
-.prof:hover {
-  text-shadow: 0.5px 0.5px 0.2px rgb(91, 1, 225);
-  transform: scale(1.05);
-  color: #7300ff;
-}
-
-.repo {
-  margin: 20px 0 0 0;
-  justify-content: space-between;
-  transition: transform 0.3s, color 0.3s;
-}
-
-.repo:hover {
-  text-shadow: 0.5px 0.5px 0.2px rgb(91, 1, 225);
-  transform: scale(1.05);
-  color: #7300ff;
-}
-
-.links {
-  padding-top: 5px;
-  height: 25%;
+header {
+    display: flex;
+    padding: 10px 20px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--primary-color-border);
+    text-shadow: 0px 0px 2px var(--primary-color-shadow);
+    animation: fadeIn 1s ease-in-out;
+    background: var(--gradient);
 }
 
 .search-container {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  margin: 20px 0 -40px -20px; /* make search container to the center */
+    display: flex;
+    align-items: center;
+    color: var(--primary-color);
 }
 
-/* Search input styling */
 #searchInput {
-  padding: 10px 10px 10px 30px;
-  width: 100%;
-  max-width: 300px;
-  border: 6px solid #ddd;
-  border-radius: 10px;
-  margin-right: 10px;
-  margin-top: -1%;
-  margin-bottom: 5%;
-  position:relative;
-  left: 40%;
-  background-color: white;
-  animation: border-animation 5s infinite;
-  transition: transform 0.3s, box-shadow 0.3s;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cdefs/%3E%3Cpath d='M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z'/%3E%3C/svg%3E");
-  background-position: center left 0.5em;
-  background-repeat: no-repeat;
-  background-size: 1.10rem;
+    border-radius: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    font-size: 0.9rem;
+    padding: 4px;
+    box-shadow: 0px 0px 2px var(--primary-color-border);
+    transition: var(--transition);
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
-#searchTnput:hover {
-  text-shadow: 0.5px 0.5px 0.2px rgb(91, 1, 225);
-  transform: scale(1.05);
-  color: #7300ff;
+#searchInput:hover {
+    box-shadow: 0px 0px 5px var(--primary-color);
 }
 
-#empty-state {
-  font-size: larger;
-  font-weight: bolder;
-  color: aliceblue;
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  animation: color-animation 5s infinite;
+.search-container > svg {
+    margin-left: 10px;
+    transition: var(--transition);
+}
+
+.search-container > svg:hover {
+    transform: scale(1.2);
+}
+
+.heading {
+    font-size: 2rem;
+    color: var(--primary-color);
+    text-shadow: 0px 0px 2px var(--primary-color-shadow);
+    animation: slideIn 1s ease-in-out;
+}
+
+.cardholder {
+    display: grid;
+    gap: 20px;
+    padding: 40px 10px;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center; /* Center items horizontally */
+}
+
+/* Adjust for single card in a row */
+.cardholder > .card:last-child:nth-child(3n+1) {
+    grid-column: 2; /* Place the single card in the center column */
+}
+
+@media only screen and (max-width: 528px) {
+    .cardholder {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Adjust for single card in a row on smaller screens */
+    .cardholder > .card:last-child:nth-child(2n+1) {
+        grid-column: 1 / span 2; /* Span both columns to center */
+        justify-self: center; /* Center the card itself */
+    }
+}
+
+
+.cardholder > .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 1px solid var(--primary-color-border);
+    height: 350px;
+    width: 300px;
+    margin: 0px auto;
+    background: var(--gradient);
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    animation: fadeIn 1s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient);
+    opacity: 0;
+    transition: var(--transition);
+    z-index: 1;
+}
+
+.card:hover::before {
+    opacity: 0.5;
+}
+
+.card > div, a {
+    display: flex;
+    justify-content: center;
+    color: var(--text-color);
+    align-items: center;
+    text-shadow: 0px 0px 2px var(--primary-color-shadow);
+    position: relative;
+    z-index: 2;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: var(--hover-shadow);
+}
+
+.name {
+    font-size: 1.4rem;
+    transition: var(--transition);
+}
+
+.name:hover {
+    color: var(--primary-color);
+}
+
+.prof, .repo {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+.prof:hover, .repo:hover {
+    transform: scale(1.1);
+    color: var(--primary-color);
+}
+
+.prof > svg {
+    margin-right: 10px;
+    transition: var(--transition);
+}
+
+.prof > svg:hover {
+    transform: scale(1.2);
+}
+
+.prof > a, .repo > a {
+    transition: var(--transition);
+    color: var(--text-color);
+}
+
+.prof > a:hover, .repo > a:hover {
+    color: var(--primary-color);
 }
 
 .foot {
-  margin: 20px 0 20px 0;
-  font-size: larger;
-  font-weight: bolder;
-  color: aliceblue;
-  display: flex;
-  width: 100%;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
+    padding: 2% 0px;
+    border-top: 2px solid var(--primary-color-border);
+    animation: fadeIn 1s ease-in-out;
+    background: var(--gradient);
 }
 
-@keyframes border-animation {
-  0% {
-    border-color: rgb(160, 140, 212);
-  }
-
-  20% {
-    border-color: rgb(114, 94, 163);
-  }
-
-  40% {
-    border-color: rgb(83, 67, 113);
-  }
-
-  60% {
-    border-color: rgb(139, 107, 180);
-  }
-
-  80% {
-    border-color: rgb(255, 255, 255);
-  }
-
-  100% {
-    border-color: rgb(182, 146, 227);
-  }
+@media only screen and (max-width: 528px) {
+    .cardholder {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-@keyframes color-animation {
-  0% {
-    color: rgb(215, 192, 217);
-  }
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
-  25% {
-    color: rgb(230, 171, 244);
-  }
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
-  50% {
-    color: rgb(205, 140, 235);
-  }
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 
-  75% {
-    color: rgb(110, 82, 171);
-  }
-
-  100% {
-    color: rgb(218, 160, 247);
-  }
+.card {
+    animation: pulse 2s infinite;
 }
